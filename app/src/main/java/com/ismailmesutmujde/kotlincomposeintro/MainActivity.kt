@@ -61,6 +61,19 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         CustomText(text = "Hello World!")
         Spacer(modifier =Modifier.padding(5.dp))
         CustomText(text = "Hello Kotlin!")
+        Spacer(modifier =Modifier.padding(5.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment =  Alignment.CenterVertically
+        ) {
+            CustomText(text = "Test 1")
+            Spacer(modifier =Modifier.padding(5.dp))
+            CustomText(text = "Test 2")
+            Spacer(modifier =Modifier.padding(5.dp))
+            CustomText(text = "Test 3")
+        }
     }
 
 
@@ -127,7 +140,7 @@ fun CustomText(text: String) {
             }
             .background(color = Color.Black)
             .padding(top = 10.dp, start = 1.dp, end = 1.dp, bottom = 30.dp)
-            .width(200.dp)
+            //.width(150.dp)
             //.height(200.dp)
             //.size(width = 50.dp, height = 50.dp)
             //.fillMaxWidth(0.5f)
