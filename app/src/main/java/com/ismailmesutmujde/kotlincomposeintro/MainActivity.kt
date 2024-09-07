@@ -9,8 +9,13 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -41,20 +46,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
     // Column, Row, Box
 
+    Column {
+        CustomText(text = "Hello Android")
+        CustomText(text = "Hello World")
+        CustomText(text = "Hello Kotlin")
+    }
+
+
     // Column : alt alta dizer
 
+    /*
     Column {
-        Text(
-            text = "Hello Android!",
-            modifier = modifier.background(color = Color.Black)
-                .padding(top = 10.dp, start = 1.dp, end = 1.dp, bottom = 30.dp)
-                .clickable {
-                           println("hello android clicked")
-                },
-            color = Color.White,
-            fontSize = 25.sp,
-            fontWeight = FontWeight.Bold
-        )
+
         Text(
             text = "Hello World!",
             modifier = modifier,
@@ -62,7 +65,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold
         )
-    }
+    }*/
 
     // Row : yan yana dizer
     /*
@@ -101,6 +104,28 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold
         )
     }*/
+}
+
+@Composable
+fun CustomText(text: String) {
+    Text(
+        text = text,
+        modifier = Modifier
+            .background(color = Color.Black)
+            .padding(top = 10.dp, start = 1.dp, end = 1.dp, bottom = 30.dp)
+            .clickable {
+                println("hello android clicked")
+            }
+            //.width(250.dp)
+            //.height(200.dp)
+            //.size(width = 50.dp, height = 50.dp)
+            //.fillMaxWidth(0.5f)
+            //.fillMaxHeight(0.5f)
+            .fillMaxSize(0.5f),
+        color = Color.White,
+        fontSize = 22.sp,
+        fontWeight = FontWeight.Bold
+    )
 }
 
 @Preview(showBackground = true)
