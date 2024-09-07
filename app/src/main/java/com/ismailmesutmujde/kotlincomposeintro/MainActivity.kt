@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -32,20 +35,65 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello Android!",
-        modifier = modifier,
-        color = Color.Blue,
-        fontSize = 25.sp,
-        fontWeight = FontWeight.Bold
-    )
-    Text(
-        text = "Hello World!",
-        modifier = modifier,
-        color = Color.Blue,
-        fontSize = 25.sp,
-        fontWeight = FontWeight.Bold
-    )
+
+    // Column, Row, Box
+
+    // Column : alt alta dizer
+
+    Column {
+        Text(
+            text = "Hello Android!",
+            modifier = modifier,
+            color = Color.Blue,
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Hello World!",
+            modifier = modifier,
+            color = Color.Blue,
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }
+
+    // Row : yan yana dizer
+    /*
+    Row {
+        Text(
+            text = "Hello Android!",
+            modifier = modifier,
+            color = Color.Blue,
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Hello World!",
+            modifier = modifier,
+            color = Color.Blue,
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }*/
+
+    // Box : üst üste dizer
+    /*
+    Box {
+        Text(
+            text = "Hello Android!",
+            modifier = modifier,
+            color = Color.Blue,
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Hello World!",
+            modifier = modifier,
+            color = Color.Blue,
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }*/
 }
 
 @Preview(showBackground = true)
